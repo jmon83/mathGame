@@ -2,6 +2,7 @@ let theCount = 0;
 let yourScore = 0;
 let helloDialog = document.getElementById('helloDialog');
 let theSpan = document.getElementById('highScore');
+let fs = require('fs');
 
 let playGame = function(){
   countDown();
@@ -12,9 +13,10 @@ let gameStart = function(){
 }
 
 //Get or Set High Score
-highScore = function(){
-
-}
+let highScore = function(){
+  var json = JSON.parse(fs.readFileSync('score.JSON', 'utf8'));
+    console.log(json);
+  };
 
 //Countdown
 let countDown = function() {
@@ -34,7 +36,7 @@ $('#c3').fadeIn(1000, function(){
   })
 });
 gameStart();
-}
+};
 
 
 //Make the math problems
@@ -45,5 +47,6 @@ gameStart();
 
 
 $(document).ready(function (){
-  $('#helloDialog').modal('toggle');
+  $('#helloDialog').modal('toggle')
+  highScore()
 })
