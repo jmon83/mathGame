@@ -48,5 +48,5 @@ gameStart();
 
 $(document).ready(function (){
   $('#helloDialog').modal('toggle')
-  highScore()
-})
+  highScore();
+});
