@@ -87,6 +87,68 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.flash{
+
+  -moz-animation: flash .25s ease-out;
+  -moz-animation-iteration-count: 1;
+
+  -webkit-animation: flash .25s ease-out;
+  -webkit-animation-iteration-count: 1;
+
+  -ms-animation: flash .25s ease-out;
+  -ms-animation-iteration-count: 1;
+
+}
+
+@-webkit-keyframes flash {
+  0% { color:white;}
+  50% { color:green;}
+  100% {color:white;}
+}
+
+@-moz-keyframes flash {
+  0% { color:white;}
+  50% { color:green;}
+  100% {color:white;}
+}
+
+@-ms-keyframes flash {
+  0% { color:white;}
+  50% { color:green;}
+  100% {color:white;}
+}
+
+.wrongFlash{
+
+  -moz-animation: flash2 .3s ease-out;
+  -moz-animation-iteration-count: 1;
+
+  -webkit-animation: flash2 .3s ease-out;
+  -webkit-animation-iteration-count: 1;
+
+  -ms-animation: flash2 .3s ease-out;
+  -ms-animation-iteration-count: 1;
+
+}
+
+@-webkit-keyframes flash2 {
+  0% { color:white;}
+  50% { color:red;}
+  100% {color:white;}
+}
+
+@-moz-keyframes flash2 {
+  0% { color:white;}
+  50% { color:red;}
+  100% {color:white;}
+}
+
+@-ms-keyframes flash2 {
+  0% { color:white;}
+  50% { color:red;}
+  100% {color:white;}
+}
+
 .container-fluid {
   padding-right: 0px;!important;
   padding-left: 0px;!important;
@@ -147,16 +209,18 @@ font-size: 96px;
 }
 
 #helloDialog{
-  border-radius: 5px;
+  border-radius: 10px;
   border: 0px;
 }
 
 #byeDialog{
-  z-index: 100;
-  width: 250px;
-  height: 150px;
-  position: center;
+  border-radius: 5px;
+  border: 0px;
+}
 
+.modal-content{
+  border-radius: 10px;
+  border: 5px solid white;
 }
 
 /* ==========================================================================
