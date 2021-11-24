@@ -92,6 +92,8 @@ let gameStart = function(){
 }
 
 let endGame = function() {
+  $('#progBarMeter').removeClass('bg-warning');
+  $('#progBarMeter').removeClass('bg-danger');
   progBarMeter.style.width = '0%';
   yourScoreDisp.textContent = ` ${yourScore}`;
   $('#byeDialog').modal('toggle');
