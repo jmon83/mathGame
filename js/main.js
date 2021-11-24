@@ -81,6 +81,7 @@ let updateTheMeter = function () {
 function playGame(){
   theCount = 0;
   yourScore = 0;
+  $("#progBarMeter").addClass("bg-success");
   countDown();
   gameStart();
 }
@@ -206,6 +207,7 @@ let answerTheQuestion = function(input, answer){
 
 $(document).ready(function () {
   $('#helloDialog').modal('toggle');
+
 
   $(function() {
     $('#answerField').keypress(function (e) {
