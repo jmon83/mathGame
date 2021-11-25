@@ -89,6 +89,7 @@ function playGame(){
 let gameStart = function(){
   displayProblem();
   aTick();
+  $('#answerField').focus();
 }
 
 let endGame = function() {
@@ -161,17 +162,19 @@ let makeProblem = function () {
       theQuestion.question = num1 + " + " + num2;
       break;
     case 2:
-      theQuestion.answer = num1 - num2;
-      theQuestion.question = num1 + " - " + num2;
+      let bigOne = Math.max(num1, num2);
+      let smallOne = Math.min(num1, num2);
+      theQuestion.answer = bigOne - smallOne;
+      theQuestion.question = bigOne + " - " + smallOne;
       break;
     case 3:
       theQuestion.answer = num1 * num2;
       theQuestion.question = num1 + " x " + num2;
       break;
     case 4:
-      let theQuestionDiv = num1 / num2;
-      theQuestion.answer = Math.floor(theQuestionDiv);
-      theQuestion.question = num1 + " ÷ " + num2;
+      let numDivisor = num1 * num2;
+      theQuestion.answer = num2;
+      theQuestion.question = numDivisor + " ÷ " + num1;
       break;
   }
   return theQuestion;
